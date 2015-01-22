@@ -1,0 +1,5 @@
+Compiler :
+g++ -lsfml-graphics -lsfml-window -lsfml-system -lGL -lGLU -lglut code.cpp -o code
+
+Exécuter :
+./codes

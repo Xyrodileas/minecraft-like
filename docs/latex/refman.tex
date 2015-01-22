@@ -1,0 +1,95 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Minecraft-\/\-Like \\[1ex]\large 1.\-5 }\\
+\vspace*{1cm}
+{\large Généré par Doxygen 1.8.1.2}\\
+\vspace*{0.5cm}
+{\small Jeudi Mars 21 2013 22:53:48}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Index des espaces de nommage}
+\input{namespaces}
+\chapter{Index des classes}
+\input{hierarchy}
+\chapter{Index des classes}
+\input{annotated}
+\chapter{Documentation des espaces de nommage}
+\input{namespaceccli}
+\chapter{Documentation des classes}
+\input{classCamera}
+\input{classClient}
+\input{classControles}
+\input{classCube}
+\input{classCubePelouse}
+\input{classCubePierre}
+\input{classCubeTerre}
+\input{classEcran}
+\input{classFace}
+\input{classJoueur}
+\input{classJoueurExt}
+\input{classMembre}
+\input{classNetworkingException}
+\input{classPersonnage}
+\input{classPlateau}
+\input{classPoint}
+\input{classServeur}
+\printindex
+\end{document}

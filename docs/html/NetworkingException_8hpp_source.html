@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Minecraft-Like:  Fichier source de /home/xyrodileas/Bureau/Projet_Graphique/trunk/code_source/src/reseau/NetworkingException.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Minecraft-Like
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Jeu dans le style de Minecraft développé en C++ avec Opengl</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Amis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_862cc3e59314e336e0f969a506c84173.html">code_source</a></li><li class="navelem"><a class="el" href="dir_9edcc16a6938c5c7c40e6e9c355c98fc.html">src</a></li><li class="navelem"><a class="el" href="dir_f309262021d3382226d7fd2c829e175d.html">reseau</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">NetworkingException.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _NetworkingException_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _NetworkingException_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">typedef</span> std::pair&lt;int, std::string&gt; insertion;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classNetworkingException.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNetworkingException.html">NetworkingException</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// Stockage de toutes les erreurs</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> std::map&lt;unsigned int, std::string&gt; id_err;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">// Boolean pour empecher plusieurs initialisation</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> init;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">// Id pour la map</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::string cause;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">bool</span> isset(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// ajoute une nouvelle erreur dans la map</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> add(<span class="keywordtype">int</span> ex, std::string m){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">if</span>(id_err.find(ex)==id_err.end())</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        id_err.insert(insertion(ex,m));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">// Initialise toutes les erreurs definit par cette entête</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classNetworkingException.html#acd20cabe5e9130c7798ce045eda1b931">init_err</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// Constructeurs</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classNetworkingException.html">NetworkingException</a>(): id(2147483646){}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classNetworkingException.html">NetworkingException</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ex): id(ex){</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">if</span>(id_err.find(ex) == id_err.end()) <span class="keywordtype">id</span> = 2147483646; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classNetworkingException.html">NetworkingException</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ex, std::string c): id(ex), cause(c){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">if</span>(id_err.find(ex) == id_err.end()) <span class="keywordtype">id</span> = 2147483646; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classNetworkingException.html">NetworkingException</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ex, std::string m, std::string c): id(ex), cause(c){ add(ex,m); }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classNetworkingException.html">NetworkingException</a>(std::string m): id(2147483646), cause(m){}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// Getters</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::string getMessage(){ <span class="keywordflow">return</span> id_err.find(<span class="keywordtype">id</span>)-&gt;second; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::string get_cause(){ <span class="keywordflow">return</span> cause; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Afficher de facon automatique</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNetworkingException.html#ac5b663a69dff4cce3c5be45a6e245eb4">displaySortieStandard2</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> NetworkingException::isset(<span class="keywordtype">bool</span> un_ou_deux){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// si l&#39;on veut le message et qu&#39;il est renseigne, vrai</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// sinon, faux</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span>(id_err.find(<span class="keywordtype">id</span>) == id_err.end()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span>(un_ou_deux &amp;&amp; id_err.find(<span class="keywordtype">id</span>)-&gt;second != <span class="stringliteral">&quot;NULL&quot;</span>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// si l&#39;on veut la cause et qu&#39;elle est renseigné, vrai</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">// sinon, faux</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span>(!un_ou_deux &amp;&amp; cause != <span class="stringliteral">&quot;NULL&quot;</span>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="classNetworkingException.html#ac5b663a69dff4cce3c5be45a6e245eb4">   82</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classNetworkingException.html#ac5b663a69dff4cce3c5be45a6e245eb4">NetworkingException::displaySortieStandard2</a>(){</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>(isset(<span class="keyword">true</span>))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                std::cout &lt;&lt;<span class="stringliteral">&quot;\n\n Message d&#39;erreur :&quot;</span> &lt;&lt; std::endl &lt;&lt; id_err.find(<span class="keywordtype">id</span>)-&gt;second &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span>(isset(<span class="keyword">false</span>))</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Cause de l&#39;erreur :&quot;</span> &lt;&lt; cause &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#ifndef _Je_serai_inclus_</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;std::map&lt;unsigned int, std::string&gt; NetworkingException::id_err;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">bool</span> NetworkingException::init = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classNetworkingException.html#acd20cabe5e9130c7798ce045eda1b931">  112</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classNetworkingException.html#acd20cabe5e9130c7798ce045eda1b931">NetworkingException::init_err</a>(){</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">// une initialisation suffit</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span>(init) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">else</span> init=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// Erreur par defaut</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        id_err.insert(insertion(2147483646,<span class="stringliteral">&quot;Initialise mieu t&#39;es erreurs !&quot;</span>));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">// Erreurs serveur</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        id_err.insert(insertion(0,<span class="stringliteral">&quot;Windows, Windows ... \nerreur non pas a 0 (serveur)&quot;</span>));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        id_err.insert(insertion(1,<span class="stringliteral">&quot;socket() crashed (serveur)\n&quot;</span>));</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        id_err.insert(insertion(2,<span class="stringliteral">&quot;bind() crashed (serveur)\n&quot;</span>));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        id_err.insert(insertion(3,<span class="stringliteral">&quot;listen() crashed (serveur)\n&quot;</span>));</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        id_err.insert(insertion(4,<span class="stringliteral">&quot;Envoie de donnees echoue&quot;</span>));</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        id_err.insert(insertion(5,<span class="stringliteral">&quot;accept() crashed (serveur)&quot;</span>));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        id_err.insert(insertion(6,<span class="stringliteral">&quot;reception crashed (serveur)&quot;</span>));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        id_err.insert(insertion(7,<span class="stringliteral">&quot;reception bufferI crashed (serveur)&quot;</span>));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        id_err.insert(insertion(8,<span class="stringliteral">&quot;reception bufferS crashed (serveur)&quot;</span>));</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        id_err.insert(insertion(9,<span class="stringliteral">&quot;l&#39;id de thread existe deja (serveur)&quot;</span>));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="comment">// Erreurs client</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        id_err.insert(insertion(100,<span class="stringliteral">&quot;Windows, Windows ... \nerreur non pas a 0 (client)&quot;</span>));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        id_err.insert(insertion(101,<span class="stringliteral">&quot;socket() crashed (client)\n&quot;</span>));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        id_err.insert(insertion(102,<span class="stringliteral">&quot;connect() crashed (client)\n&quot;</span>));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        id_err.insert(insertion(103,<span class="stringliteral">&quot;reception crashed (client)\n&quot;</span>));</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        id_err.insert(insertion(104,<span class="stringliteral">&quot;send crashed (client)\n&quot;</span>));</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// Erreurs d&#39;echange</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi Mars 21 2013 22:53:48 pour Minecraft-Like par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

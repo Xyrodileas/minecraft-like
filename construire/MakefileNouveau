@@ -1,0 +1,32 @@
+CXX=g++
+CFLAGS=-Wall -Wextra
+INCLUDE=-Isrc/res -Isrc/utils -Isrc/ -Ilib/ -Ilib/utils/ -Ilib/TmxParser/ -Ilib/TmxParser/base64/
+LDFLAGS=-lsfml-graphics -lsfml-window -lsfml-system -lGLU
+EXEC=.build/graph
+SRC=../code_source/src/graphique/code.cpp $(wildcard ../code_source/src/cube/*.cpp) 
+OBJ= $(SRC:.cpp=.o)
+
+build: $(EXEC)
+
+$(EXEC): $(OBJ)
+	$(CXX) -o $(EXEC) $^ $(LDFLAGS)
+
+main.o: *.hpp
+
+%.o: %.cpp
+	# Compiling $<
+	$(CXX) -o $@ -c $< $(CFLAGS) $(INCLUDE)
+
+.PHONY: clean mrproper
+
+clean:
+	rm $(OBJ)
+
+mrproper: clean
+	rm $(EXEC)
+
+run:
+	$(EXEC)
+
+build-run: build run
+

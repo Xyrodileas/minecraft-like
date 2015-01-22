@@ -1,0 +1,176 @@
+../code_source/src/graphique/code.cpp:152:54: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur1(x,   y, 550, true, (char**)'tt');
+                                                      ^
+../code_source/src/graphique/code.cpp:153:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur3(x+100, y, 550, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:154:54: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur2(x,   y, 600, true, (char**)'tt');
+                                                      ^
+../code_source/src/graphique/code.cpp:155:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur4(x+100, y, 600, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:156:54: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur5(x,   y, 650, true, (char**)'tt');
+                                                      ^
+../code_source/src/graphique/code.cpp:157:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur6(x+100, y ,650, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:158:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur7(x+50,  y ,650, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:160:54: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur8(x,   y, 700, true, (char**)'tt');
+                                                      ^
+../code_source/src/graphique/code.cpp:161:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur9(x+100, y ,700, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:162:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur10(x+50, y ,700, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:163:55: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur11(x,   y, 750, true, (char**)'tt');
+                                                       ^
+../code_source/src/graphique/code.cpp:164:57: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur12(x+100, y ,750, true, (char**)'tt');
+                                                         ^
+../code_source/src/graphique/code.cpp:165:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur13(x+50, y ,750, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:167:57: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur14(x-50,  y, 750, true, (char**)'tt');
+                                                         ^
+../code_source/src/graphique/code.cpp:168:57: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur15(x+150, y ,750, true, (char**)'tt');
+                                                         ^
+../code_source/src/graphique/code.cpp:169:57: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur16(x-100, y, 750, true, (char**)'tt');
+                                                         ^
+../code_source/src/graphique/code.cpp:170:57: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur17(x+200, y ,750, true, (char**)'tt');
+                                                         ^
+../code_source/src/graphique/code.cpp:171:56: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueur18(x+50, y ,800, true, (char**)'tt');
+                                                        ^
+../code_source/src/graphique/code.cpp:173:54: warning: multi-character character constant [-Wmultichar]
+     JoueurExt testjoueurmulti(0, 0 ,0, true, (char**)'titi');
+                                                      ^
+In file included from ../code_source/src/graphique/code.cpp:13:0:
+../code_source/src/graphique/../Joueur/Controles.h:26:23: error: ‘Input’ in namespace ‘sf’ does not name a type
+  void Check(const sf::Input& Input);
+                       ^
+In file included from /usr/include/SFML/Graphics.hpp:42:0,
+                 from ../code_source/src/graphique/code.cpp:4:
+/usr/include/SFML/Graphics/Shape.hpp: In function ‘int main(int, char**)’:
+/usr/include/SFML/Graphics/Shape.hpp:246:5: error: ‘sf::Shape::Shape()’ is protected
+     Shape();
+     ^
+../code_source/src/graphique/code.cpp:59:14: error: within this context
+    sf::Shape Polygon;
+              ^
+../code_source/src/graphique/code.cpp:59:14: error: cannot declare variable ‘Polygon’ to be of abstract type ‘sf::Shape’
+In file included from /usr/include/SFML/Graphics.hpp:42:0,
+                 from ../code_source/src/graphique/code.cpp:4:
+/usr/include/SFML/Graphics/Shape.hpp:44:25: note:   because the following virtual functions are pure within ‘sf::Shape’:
+ class SFML_GRAPHICS_API Shape : public Drawable, public Transformable
+                         ^
+/usr/include/SFML/Graphics/Shape.hpp:196:26: note: 	virtual unsigned int sf::Shape::getPointCount() const
+     virtual unsigned int getPointCount() const = 0;
+                          ^
+/usr/include/SFML/Graphics/Shape.hpp:210:22: note: 	virtual sf::Vector2f sf::Shape::getPoint(unsigned int) const
+     virtual Vector2f getPoint(unsigned int index) const = 0;
+                      ^
+../code_source/src/graphique/code.cpp:60:11: error: ‘class sf::Shape’ has no member named ‘AddPoint’
+   Polygon.AddPoint(0, -1,  sf::Color(255, 0, 0),     sf::Color(0, 128, 128));
+           ^
+../code_source/src/graphique/code.cpp:61:11: error: ‘class sf::Shape’ has no member named ‘AddPoint’
+   Polygon.AddPoint(1, 0,   sf::Color(255, 85, 85),   sf::Color(0, 128, 128));
+           ^
+../code_source/src/graphique/code.cpp:62:11: error: ‘class sf::Shape’ has no member named ‘AddPoint’
+   Polygon.AddPoint(1, 1,  sf::Color(255, 170, 170), sf::Color(0, 128, 128));
+           ^
+../code_source/src/graphique/code.cpp:63:11: error: ‘class sf::Shape’ has no member named ‘AddPoint’
+   Polygon.AddPoint(0, 5,  sf::Color(255, 255, 255), sf::Color(0, 128, 128));
+           ^
+../code_source/src/graphique/code.cpp:64:11: error: ‘class sf::Shape’ has no member named ‘AddPoint’
+   Polygon.AddPoint(-1, 1, sf::Color(255, 170, 170), sf::Color(0, 128, 128));
+           ^
+../code_source/src/graphique/code.cpp:65:11: error: ‘class sf::Shape’ has no member named ‘AddPoint’
+   Polygon.AddPoint(-1, 0,  sf::Color(255, 85, 85),   sf::Color(0, 128, 128));
+           ^
+../code_source/src/graphique/code.cpp:77:6: error: ‘class sf::RenderWindow’ has no member named ‘ShowMouseCursor’
+  App.ShowMouseCursor(false);
+      ^
+../code_source/src/graphique/code.cpp:89:16: error: ‘class sf::Image’ has no member named ‘LoadFromFile’
+  if (!img_data.LoadFromFile("terre2.png"))
+                ^
+../code_source/src/graphique/code.cpp:101:15: error: ‘class sf::Image’ has no member named ‘GetWidth’
+      img_data.GetWidth(), 
+               ^
+../code_source/src/graphique/code.cpp:102:15: error: ‘class sf::Image’ has no member named ‘GetHeight’
+      img_data.GetHeight(),
+               ^
+../code_source/src/graphique/code.cpp:104:42: error: ‘class sf::Image’ has no member named ‘GetPixelsPtr’
+      GL_RGBA, GL_UNSIGNED_BYTE, img_data.GetPixelsPtr()
+                                          ^
+../code_source/src/graphique/code.cpp:120:7: error: ‘class sf::String’ has no member named ‘SetFont’
+  Text.SetFont(sf::Font::GetDefaultFont());
+       ^
+../code_source/src/graphique/code.cpp:120:15: error: ‘GetDefaultFont’ is not a member of ‘sf::Font’
+  Text.SetFont(sf::Font::GetDefaultFont());
+               ^
+../code_source/src/graphique/code.cpp:121:7: error: ‘class sf::String’ has no member named ‘SetSize’
+  Text.SetSize(50);
+       ^
+../code_source/src/graphique/code.cpp:186:13: error: ‘class sf::RenderWindow’ has no member named ‘IsOpened’
+  while (App.IsOpened())
+             ^
+../code_source/src/graphique/code.cpp:188:13: error: ‘Input’ in namespace ‘sf’ does not name a type
+   const sf::Input& Input = App.GetInput();
+             ^
+../code_source/src/graphique/code.cpp:189:3: error: expected ‘;’ before ‘:’ token
+ 36: error: expected 
+   ^
+../code_source/src/graphique/code.cpp:191:17: error: ‘class sf::RenderWindow’ has no member named ‘GetEvent’
+      while (App.GetEvent(Event))
+                 ^
+../code_source/src/graphique/code.cpp:191:26: error: ‘Event’ was not declared in this scope
+      while (App.GetEvent(Event))
+                          ^
+../code_source/src/graphique/code.cpp:191:26: note: suggested alternative:
+In file included from /usr/include/SFML/Window.hpp:35:0,
+                 from ../code_source/src/graphique/code.cpp:3:
+/usr/include/SFML/Window/Event.hpp:43:7: note:   ‘sf::Event’
+ class Event
+       ^
+../code_source/src/graphique/code.cpp:195:18: error: ‘class sf::RenderWindow’ has no member named ‘Close’
+              App.Close();
+                  ^
+../code_source/src/graphique/code.cpp:198:78: error: ‘sf::Key’ has not been declared
+          if ((Event.Type == sf::Event::KeyPressed) && (Event.Key.Code == sf::Key::Escape))
+                                                                              ^
+../code_source/src/graphique/code.cpp:199:18: error: ‘class sf::RenderWindow’ has no member named ‘Close’
+              App.Close();
+                  ^
+../code_source/src/graphique/code.cpp:264:31: error: ‘class sf::RenderWindow’ has no member named ‘GetFrameTime’
+   float Framerate = 1.f / App.GetFrameTime();
+                               ^
+../code_source/src/graphique/code.cpp:267:21: error: ‘Input’ was not declared in this scope
+      controle.Check(Input);
+                     ^
+../code_source/src/graphique/code.cpp:271:7: error: ‘class sf::RenderWindow’ has no member named ‘SetActive’
+   App.SetActive();
+       ^
+../code_source/src/graphique/code.cpp:364:10: error: ‘class sf::RenderWindow’ has no member named ‘Display’
+      App.Display();
+          ^
+../code_source/src/graphique/code.cpp:365:10: error: ‘class sf::RenderWindow’ has no member named ‘SetCursorPosition’
+      App.SetCursorPosition(400,300);
+          ^
+../code_source/src/graphique/code.cpp:370:32: error: request for member ‘concat’ in ‘player1.Joueur::getPosx()’, which is of non-class type ‘float’
+    bufferS = player1.getPosx().concat(";").concat(player1.getPosy()).concat(";").concat(player1.getPosz());
+                                ^
+../code_source/src/graphique/code.cpp:372:4: error: ‘ccode’ has not been declared
+    ccode::cli.envoyer(bufferS);
+    ^
+make: *** [../code_source/src/graphique/code.o] Error 1

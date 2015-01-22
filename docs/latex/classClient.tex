@@ -1,0 +1,88 @@
+\hypertarget{classClient}{\section{Référence de la classe Client}
+\label{classClient}\index{Client@{Client}}
+}
+
+
+{\ttfamily \#include $<$reseau.\-hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classClient_af7faf381e7062b0135ab53c35dbb5542}{Client} (std\-::string)
+\item 
+void \hyperlink{classClient_ababa7bdcba8521f9a696711446d47e04}{envoyer} (std\-::string)
+\item 
+std\-::string \hyperlink{classClient_a7ec691731f5b7d5accc7dcd9d585ad4d}{recevoir} ()
+\item 
+\hypertarget{classClient_a203aac6c2bb9ae7d140c62d7ae836718}{void {\bfseries quitter} ()}\label{classClient_a203aac6c2bb9ae7d140c62d7ae836718}
+
+\item 
+\hyperlink{classClient_a840e519ca781888cbd54181572ebe3a7}{$\sim$\-Client} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{classClient_a748a40bc18d4ed6e2f98f1e9908f8711}{envoi} (void $\ast$)
+\item 
+void $\ast$ \hyperlink{classClient_aeaf2388f2f63df46fb9a90f59c34db91}{recu} (void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+La classe cliente est beaucoup plus simple puisqu'elle se connecte, envoie et recoit des informations de deux type possible et c'est tout ! 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classClient_af7faf381e7062b0135ab53c35dbb5542}{\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}Client\-::\-Client (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nom}
+\end{DoxyParamCaption}
+)}}\label{classClient_af7faf381e7062b0135ab53c35dbb5542}
+Constructeur, Se connecte au serveur et attend des messages dans un thread \hypertarget{classClient_a840e519ca781888cbd54181572ebe3a7}{\index{Client@{Client}!$\sim$\-Client@{$\sim$\-Client}}
+\index{$\sim$\-Client@{$\sim$\-Client}!Client@{Client}}
+\subsubsection[{$\sim$\-Client}]{\setlength{\rightskip}{0pt plus 5cm}Client\-::$\sim$\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classClient_a840e519ca781888cbd54181572ebe3a7}
+Destructeur classique 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classClient_ababa7bdcba8521f9a696711446d47e04}{\index{Client@{Client}!envoyer@{envoyer}}
+\index{envoyer@{envoyer}!Client@{Client}}
+\subsubsection[{envoyer}]{\setlength{\rightskip}{0pt plus 5cm}void Client\-::envoyer (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{mess}
+\end{DoxyParamCaption}
+)}}\label{classClient_ababa7bdcba8521f9a696711446d47e04}
+ne pas croire que \hyperlink{classClient_ababa7bdcba8521f9a696711446d47e04}{envoyer()} envoi sur le reseau, cela se fait avec des fonctions prive envoi met votre message sur une liste d'attente pour etre envoye \hypertarget{classClient_a7ec691731f5b7d5accc7dcd9d585ad4d}{\index{Client@{Client}!recevoir@{recevoir}}
+\index{recevoir@{recevoir}!Client@{Client}}
+\subsubsection[{recevoir}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Client\-::recevoir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classClient_a7ec691731f5b7d5accc7dcd9d585ad4d}
+La reception est la recuperation des dernieres donne recu et mise dans un file par autres clients 
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{classClient_a748a40bc18d4ed6e2f98f1e9908f8711}{\index{Client@{Client}!envoi@{envoi}}
+\index{envoi@{envoi}!Client@{Client}}
+\subsubsection[{envoi}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ envoi (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classClient_a748a40bc18d4ed6e2f98f1e9908f8711}
+Recupere les messages et les envoie au serveur \hypertarget{classClient_aeaf2388f2f63df46fb9a90f59c34db91}{\index{Client@{Client}!recu@{recu}}
+\index{recu@{recu}!Client@{Client}}
+\subsubsection[{recu}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ recu (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classClient_aeaf2388f2f63df46fb9a90f59c34db91}
+Recupere les messages du serveur et les rend diponible par le client 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
+\item 
+/home/xyrodileas/\-Bureau/\-Projet\-\_\-\-Graphique/trunk/code\-\_\-source/src/reseau/reseau.\-hpp\item 
+/home/xyrodileas/\-Bureau/\-Projet\-\_\-\-Graphique/trunk/code\-\_\-source/src/reseau/client.\-cpp\end{DoxyCompactItemize}

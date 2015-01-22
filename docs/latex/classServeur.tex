@@ -1,0 +1,116 @@
+\hypertarget{classServeur}{\section{Référence de la classe Serveur}
+\label{classServeur}\index{Serveur@{Serveur}}
+}
+
+
+{\ttfamily \#include $<$reseau.\-hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Ecoute}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classServeur_a8a7a1df15a07e095436dedd0d40a0196}{Serveur} ()
+\item 
+void \hyperlink{classServeur_a7421ed36dd73bad688ef617b684688a7}{kick} (std\-::string)
+\item 
+void \hyperlink{classServeur_a88c66169c035dd9fb1d7a220e32b99f6}{clients} ()
+\item 
+\hypertarget{classServeur_af7bcbec1b825911c32f64eb9b2d23deb}{void {\bfseries csocks} ()}\label{classServeur_af7bcbec1b825911c32f64eb9b2d23deb}
+
+\item 
+\hypertarget{classServeur_ad2c277503a0abc4cb1a203340a055734}{void {\bfseries messagess} ()}\label{classServeur_ad2c277503a0abc4cb1a203340a055734}
+
+\item 
+\hyperlink{classServeur_a722aefd65c9efab0b3e0646bf3440ea1}{$\sim$\-Serveur} ()
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{classServeur_afb450ae26198b5e7e34d4e6d5939f9ee}{attente\-\_\-clients} (void $\ast$)
+\item 
+void $\ast$ \hyperlink{classServeur_ae17c0b8683120a4c6a61b5b38bed0225}{ecoute\-\_\-client} (void $\ast$)
+\item 
+void $\ast$ \hyperlink{classServeur_ac359cb70bf30e80424334f5c858f9d80}{ecoute\-\_\-clients} (void $\ast$)
+\item 
+void $\ast$ \hyperlink{classServeur_a3eb5f390c851d5db2e61b5bd5156b242}{envoi\-\_\-aux\-\_\-clients} (void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Include personnels La classe serveur gere beaucoup de choses toute seule. Se limiter aux fonction publique pour usage. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classServeur_a8a7a1df15a07e095436dedd0d40a0196}{\index{Serveur@{Serveur}!Serveur@{Serveur}}
+\index{Serveur@{Serveur}!Serveur@{Serveur}}
+\subsubsection[{Serveur}]{\setlength{\rightskip}{0pt plus 5cm}Serveur\-::\-Serveur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classServeur_a8a7a1df15a07e095436dedd0d40a0196}
+Le constructeur initialise les erreurs du Networking exception initialise la socket principale et lui donne un adressage creer un thread pour ecouter les demandes de connection des différents clients \hypertarget{classServeur_a722aefd65c9efab0b3e0646bf3440ea1}{\index{Serveur@{Serveur}!$\sim$\-Serveur@{$\sim$\-Serveur}}
+\index{$\sim$\-Serveur@{$\sim$\-Serveur}!Serveur@{Serveur}}
+\subsubsection[{$\sim$\-Serveur}]{\setlength{\rightskip}{0pt plus 5cm}Serveur\-::$\sim$\-Serveur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classServeur_a722aefd65c9efab0b3e0646bf3440ea1}
+Ferme les connexions et les threads lance avant la fermeture du serveur libere la memoire allouer pour les \char`\"{}new thread\-\_\-t\char`\"{} 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classServeur_a88c66169c035dd9fb1d7a220e32b99f6}{\index{Serveur@{Serveur}!clients@{clients}}
+\index{clients@{clients}!Serveur@{Serveur}}
+\subsubsection[{clients}]{\setlength{\rightskip}{0pt plus 5cm}void Serveur\-::clients (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classServeur_a88c66169c035dd9fb1d7a220e32b99f6}
+Utilise seulement pour le debuggage \hypertarget{classServeur_a7421ed36dd73bad688ef617b684688a7}{\index{Serveur@{Serveur}!kick@{kick}}
+\index{kick@{kick}!Serveur@{Serveur}}
+\subsubsection[{kick}]{\setlength{\rightskip}{0pt plus 5cm}void Serveur\-::kick (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nom}
+\end{DoxyParamCaption}
+)}}\label{classServeur_a7421ed36dd73bad688ef617b684688a7}
+Comme sont nom l'indique, on sort le client du nom  
+
+\subsection{Documentation des fonctions amies et associées}
+\hypertarget{classServeur_afb450ae26198b5e7e34d4e6d5939f9ee}{\index{Serveur@{Serveur}!attente\-\_\-clients@{attente\-\_\-clients}}
+\index{attente\-\_\-clients@{attente\-\_\-clients}!Serveur@{Serveur}}
+\subsubsection[{attente\-\_\-clients}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ attente\-\_\-clients (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classServeur_afb450ae26198b5e7e34d4e6d5939f9ee}
+Fonction ami de la classe serveur permettant la demade de connexion par les clients \hypertarget{classServeur_ae17c0b8683120a4c6a61b5b38bed0225}{\index{Serveur@{Serveur}!ecoute\-\_\-client@{ecoute\-\_\-client}}
+\index{ecoute\-\_\-client@{ecoute\-\_\-client}!Serveur@{Serveur}}
+\subsubsection[{ecoute\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ ecoute\-\_\-client (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classServeur_ae17c0b8683120a4c6a61b5b38bed0225}
+ecoute les messages de sont client attitre par  et insert les receptions dans messages C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E
+
+C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E C\-O\-D\-E T\-E\-S\-T E\-N\-L\-E\-V\-E\-R Q\-U\-A\-N\-D C\-O\-R\-R\-E\-C\-T\-E\hypertarget{classServeur_ac359cb70bf30e80424334f5c858f9d80}{\index{Serveur@{Serveur}!ecoute\-\_\-clients@{ecoute\-\_\-clients}}
+\index{ecoute\-\_\-clients@{ecoute\-\_\-clients}!Serveur@{Serveur}}
+\subsubsection[{ecoute\-\_\-clients}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ ecoute\-\_\-clients (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classServeur_ac359cb70bf30e80424334f5c858f9d80}
+Creer un thread d'ecoute par client \hypertarget{classServeur_a3eb5f390c851d5db2e61b5bd5156b242}{\index{Serveur@{Serveur}!envoi\-\_\-aux\-\_\-clients@{envoi\-\_\-aux\-\_\-clients}}
+\index{envoi\-\_\-aux\-\_\-clients@{envoi\-\_\-aux\-\_\-clients}!Serveur@{Serveur}}
+\subsubsection[{envoi\-\_\-aux\-\_\-clients}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ envoi\-\_\-aux\-\_\-clients (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classServeur_a3eb5f390c851d5db2e61b5bd5156b242}
+Prend tout les messages stocké dans la base et les renvoi a tout les clients sauf l'emetteur 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
+\item 
+/home/xyrodileas/\-Bureau/\-Projet\-\_\-\-Graphique/trunk/code\-\_\-source/src/reseau/reseau.\-hpp\item 
+/home/xyrodileas/\-Bureau/\-Projet\-\_\-\-Graphique/trunk/code\-\_\-source/src/reseau/server.\-cpp\end{DoxyCompactItemize}

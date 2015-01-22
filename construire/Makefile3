@@ -1,0 +1,23 @@
+# $? represente les dependances modifies
+# $^ represente toutes les dependances
+# $+ represente $^ sans les doublons
+# $@ cible courante
+# $< represente la premiere dependance
+# %.o : %.c
+#	g++ -c $*
+# clean :
+#	rm *.o
+
+GRAPHFLAGS=-lsfml-graphics -lsfml-window -lsfml-system -lGLU
+WFLAGS=-Wall -Wextra
+INCLUDE=../code_source/src/cube ../code_source/src/graphique
+
+#add ".build/graph/Ecran.o" a la fin de la ligne suivante
+.build/graph/graph: .build/graph/code.o .build/graph/Cube.o .build/graph/CubePelouse.o
+	g++ $(WFLAGS) $(GRAPHFLAGS) $^ -o $@
+#remplace "code" par "%"
+./.build/graph/code.o : ./../code_source/src/graphique/code.cpp
+	g++ $(WFLAGS) -c $(GRAPHFLAGS) $< -o $@
+
+clean:
+	rm ./build/graph/*.o

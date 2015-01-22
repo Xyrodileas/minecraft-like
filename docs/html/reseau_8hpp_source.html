@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Minecraft-Like:  Fichier source de /home/xyrodileas/Bureau/Projet_Graphique/trunk/code_source/src/reseau/reseau.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Minecraft-Like
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+   <div id="projectbrief">Jeu dans le style de Minecraft développé en C++ avec Opengl</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Amis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_862cc3e59314e336e0f969a506c84173.html">code_source</a></li><li class="navelem"><a class="el" href="dir_9edcc16a6938c5c7c40e6e9c355c98fc.html">src</a></li><li class="navelem"><a class="el" href="dir_f309262021d3382226d7fd2c829e175d.html">reseau</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">reseau.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef _RESEAU_CEDRIC</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _RESEAU_CEDRIC</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// typedef des sock</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">typedef</span> std::pair&lt;std::string, int&gt; insertionI;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// typedef des threads</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">typedef</span> std::pair&lt;std::string, pthread_t*&gt; insertionT;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// typedef pour les messages</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">typedef</span> std::pair&lt;int, std::string&gt; insertionS;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;NetworkingException.hpp&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classServeur.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServeur.html">Serveur</a>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// variables prives</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// socket serveur</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> sock;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// sockets clients</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::map&lt;std::string, int&gt; csock;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// threads pour la mise en parrallele de taches</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::map&lt;std::string, pthread_t*&gt; threads;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// pile des messages a envoyer</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::map&lt;int, std::string&gt; messages;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// fonctions prives</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// initialise le socket serveur</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">int</span> creer_socket();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// accept un nouveau client et retourne le socket cree</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> connexion(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// Fonctions utilises dans des threads</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// effectue un echange avec le client passe en parametre</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> echange_client(<span class="keywordtype">int</span>, std::string);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// Ajoute un client</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span>* <a class="code" href="classServeur.html#afb450ae26198b5e7e34d4e6d5939f9ee">attente_clients</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">struct </span>Ecoute{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="classServeur.html">Serveur</a> * serv;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordtype">int</span> csock;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                Ecoute(<a class="code" href="classServeur.html">Serveur</a>* s, <span class="keywordtype">int</span> c): serv(s), csock(c){} </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span>* <a class="code" href="classServeur.html#ae17c0b8683120a4c6a61b5b38bed0225">ecoute_client</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span>* <a class="code" href="classServeur.html#ac359cb70bf30e80424334f5c858f9d80">ecoute_clients</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span>* <a class="code" href="classServeur.html#a3eb5f390c851d5db2e61b5bd5156b242">envoi_aux_clients</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// Constructeur unique</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classServeur.html#a8a7a1df15a07e095436dedd0d40a0196">Serveur</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// traitement des clients</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServeur.html#a7421ed36dd73bad688ef617b684688a7">kick</a>(std::string);</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="classServeur.html#a88c66169c035dd9fb1d7a220e32b99f6">   88</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classServeur.html#a88c66169c035dd9fb1d7a220e32b99f6">clients</a>(){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                std::map&lt;std::string, int&gt;::iterator it = csock.begin();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">while</span>(it != csock.end()){</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        printf(<span class="stringliteral">&quot;Cli : %s:%d&quot;</span>, it-&gt;first.c_str(), it-&gt;second);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        ++it;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> csocks(){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                std::map&lt;std::string, pthread_t*&gt;::iterator it = threads.begin();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">while</span>(it != threads.end()){</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        printf(<span class="stringliteral">&quot;threads : %s&quot;</span>, it-&gt;first.c_str());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        ++it;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> messagess(){</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                std::map&lt;int, std::string&gt;::iterator it = messages.begin();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">while</span>(it != messages.end()){</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        printf(<span class="stringliteral">&quot;messages de %d : %s&quot;</span>, it-&gt;first, it-&gt;second.c_str());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        ++it;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classServeur.html#a722aefd65c9efab0b3e0646bf3440ea1">~Serveur</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">// nombre de client maximum</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define nb_sock 10</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="classClient.html">  123</a></span>&#160;<span class="keyword">class </span><a class="code" href="classClient.html">Client</a>{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">// Nom du client (peut etre le pseudo du joueur)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        std::string nom;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// lien vers le serveur</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">int</span> sock;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// thread des messages</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        pthread_t threads[2];</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">// liste des messages</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        std::vector&lt;std::string&gt; messages_recu;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        std::vector&lt;std::string&gt; messages_envoi;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// fonctions prives</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">// fonction qui envoi les messages au serveur</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span>* <a class="code" href="classClient.html#a748a40bc18d4ed6e2f98f1e9908f8711">envoi</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// fonction qui recoit les messages du serveur</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span>* <a class="code" href="classClient.html#aeaf2388f2f63df46fb9a90f59c34db91">recu</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classClient.html#af7faf381e7062b0135ab53c35dbb5542">Client</a>(std::string);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">// envoyer() et recevoir ne sont que des getters et setters</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classClient.html#ababa7bdcba8521f9a696711446d47e04">envoyer</a>(std::string);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        std::string <a class="code" href="classClient.html#a7ec691731f5b7d5accc7dcd9d585ad4d">recevoir</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">void</span> quitter();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="classClient.html#a840e519ca781888cbd54181572ebe3a7">~Client</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;};</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi Mars 21 2013 22:53:48 pour Minecraft-Like par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>
